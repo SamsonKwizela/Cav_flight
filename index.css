@@ -316,4 +316,68 @@ a:hover{
     padding: 1px 2px;
   }
   
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+/* Small devices (phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+/* Ultra-wide screens (1600px and up) */
+@media (min-width: 1600px) {
+  body {
+    font-size: 22px;
+  }
+}
+
+/* Landscape orientation */
+@media (orientation: landscape) {
+  body {
+    padding: 20px;
+  }
+}
+
+/* Portrait orientation */
+@media (orientation: portrait) {
+  body {
+    padding: 10px;
+  }
+}
+
+/* High resolution screens (e.g., Retina) */
+@media only screen and (min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    line-height: 1.8;
+  }
+}
+
   
