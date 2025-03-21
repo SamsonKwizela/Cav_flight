@@ -316,68 +316,90 @@ a:hover{
     padding: 1px 2px;
   }
   
-
-/* Extra small devices (phones, less than 576px) */
-@media (max-width: 575.98px) {
-  body {
-    font-size: 12px;
-  }
+.introduction_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-/* Small devices (phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-  body {
-    font-size: 14px;
-  }
+.image_slideshow {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  body {
-    font-size: 16px;
-  }
+.slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
 }
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  body {
-    font-size: 18px;
-  }
+/* Button container responsiveness */
+.button_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  body {
-    font-size: 20px;
-  }
+/* Video and text section responsiveness */
+.vidoe_and_text_sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Ultra-wide screens (1600px and up) */
-@media (min-width: 1600px) {
-  body {
-    font-size: 22px;
-  }
+/* Footer responsiveness */
+.footer {
+    text-align: center;
 }
 
-/* Landscape orientation */
-@media (orientation: landscape) {
-  body {
-    padding: 20px;
-  }
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
-/* Portrait orientation */
-@media (orientation: portrait) {
-  body {
-    padding: 10px;
-  }
+/* Media Queries */
+@media (min-width: 768px) {
+    .top_nav_bar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .introduction_container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .button_container {
+        flex-direction: row;
+    }
+
+    .vidoe_and_text_sec {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
-/* High resolution screens (e.g., Retina) */
-@media only screen and (min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2) {
-  body {
-    line-height: 1.8;
-  }
-}
+@media (min-width: 1024px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
-  
+    .introduction_container {
+        flex-direction: row;
+    }
+
+    .vidoe_and_text_sec {
+        flex-direction: row;
+    }
+
+    .button_container {
+        flex-direction: row;
+    }
+
+    .social-icons {
+        gap: 20px;
+    }
+}
