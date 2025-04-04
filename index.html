@@ -130,5 +130,37 @@
         </div>
         <p>&copy; 2025 Trusted Airline. Safe, Comfortable, and Reliable Journeys.</p>
 </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const slides = document.querySelectorAll('.slide');
+        let currentIndex = 0;
 
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        // Start the slideshow
+        showSlide(currentIndex);
+        setInterval(nextSlide, 5000); // Change the slide every 5 seconds
+
+        // Optional: Add navigation controls (if needed)
+        // Uncomment the following lines if you want to add buttons for manual navigation
+        /*
+        const nextButton = document.createElement('button');
+        nextButton.innerText = 'Next';
+        nextButton.addEventListener('click', nextSlide);
+        document.body.appendChild(nextButton);
+        */
+    });
+</script>
 </html>
